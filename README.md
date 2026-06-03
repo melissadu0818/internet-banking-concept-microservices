@@ -24,7 +24,7 @@ alt="Spring Boot Microservices Project Architecture By Javatodev.com"/></a>
 
 ### Technology Stack
 
-1. Java 11
+1. Java 17
 2. Spring Boot 2.4.5
 3. Netflix Eureka Service Registry
 4. Netflix Eureka Service Client
