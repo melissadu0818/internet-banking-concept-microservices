@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.javatodev.finance'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 configurations {
 	compileOnly {
@@ -35,7 +35,7 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'com.h2database:h2:1.4.200'
+	testImplementation 'com.h2database:h2:2.2.224'
 }
 
 dependencyManagement {
