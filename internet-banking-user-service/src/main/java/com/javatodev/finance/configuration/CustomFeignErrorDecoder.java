@@ -1,4 +1,4 @@
-package com.javatodev.finance.configuration.feign;
+package com.javatodev.finance.configuration;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,24 +19,20 @@ public class CustomFeignErrorDecoder implements ErrorDecoder {
 
         SimpleBankingGlobalException simpleBankingGlobalException = extractBankingCoreGlobalException(response);
 
-        return switch (response.status()) {
-            case 400 -> {
+        switch (response.status()) {
+            case 400:
                 log.error("Error in request went through feign client {} ", simpleBankingGlobalException.getMessage() + " - " + simpleBankingGlobalException.getCode());
-                yield simpleBankingGlobalException;
-            }
-            case 401 -> {
+                return simpleBankingGlobalException;
+            case 401:
                 log.error("Unauthorized Request Through Feign");
-                yield new Exception("Unauthorized Request Through Feign");
-            }
-            case 404 -> {
+                return new Exception("Unauthorized Request Through Feign");
+            case 404:
                 log.error("Unidentified Request Through Feign ");
-                yield new Exception("Unidentified Request Through Feign");
-            }
-            default -> {
+                return new Exception("Unidentified Request Through Feign");
+            default:
                 log.error("Error in request went through feign client");
-                yield new Exception("Common Feign Exception");
-            }
-        };
+                return new Exception("Common Feign Exception");
+        }
 
     }
 

@@ -1,11 +1,9 @@
 package com.javatodev.finance.model.dto;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(callSuper = false)
-public class User extends AuditAware {
+public class User {
     private Long id;
 
     private String email;

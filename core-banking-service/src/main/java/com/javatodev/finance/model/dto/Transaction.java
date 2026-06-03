@@ -1,8 +1,8 @@
 package com.javatodev.finance.model.dto;
 
-import java.math.BigDecimal;
-
 import lombok.Data;
+
+import java.math.BigDecimal;
 
 @Data
 public class Transaction {

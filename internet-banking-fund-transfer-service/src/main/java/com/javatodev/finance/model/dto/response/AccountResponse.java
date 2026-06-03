@@ -1,8 +1,8 @@
 package com.javatodev.finance.model.dto.response;
 
-import java.math.BigDecimal;
-
 import lombok.Data;
+
+import java.math.BigDecimal;
 
 @Data
 public class AccountResponse {

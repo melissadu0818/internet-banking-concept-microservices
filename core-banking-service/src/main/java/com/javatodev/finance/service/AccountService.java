@@ -9,10 +9,8 @@ import com.javatodev.finance.model.mapper.BankAccountMapper;
 import com.javatodev.finance.model.mapper.UtilityAccountMapper;
 import com.javatodev.finance.repository.BankAccountRepository;
 import com.javatodev.finance.repository.UtilityAccountRepository;
-
-import org.springframework.stereotype.Service;
-
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
@@ -34,7 +32,7 @@ public class AccountService {
         return utilityAccountMapper.convertToDto(utilityAccountEntity);
     }
 
-    public UtilityAccount readUtilityAccount(Long id) {
+    public UtilityAccount readUtilityAccount(Long id){
         return utilityAccountMapper.convertToDto(utilityAccountRepository.findById(id).orElseThrow(EntityNotFoundException::new));
     }
 

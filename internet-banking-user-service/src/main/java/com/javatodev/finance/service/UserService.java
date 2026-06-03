@@ -33,7 +33,7 @@ public class UserService {
     public User createUser(User user) {
 
         List<UserRepresentation> userRepresentations = keycloakUserService.readUserByEmail(user.getEmail());
-        if (!userRepresentations.isEmpty()) {
+        if (userRepresentations.size() > 0) {
             throw new UserAlreadyRegisteredException("This email already registered as a user. Please check and retry.", GlobalErrorCode.ERROR_EMAIL_REGISTERED);
         }
 
@@ -50,8 +50,6 @@ public class UserService {
             userRepresentation.setEmailVerified(false);
             userRepresentation.setEnabled(false);
             userRepresentation.setUsername(userResponse.getEmail());
-            userRepresentation.setFirstName(userResponse.getFirstName());
-            userRepresentation.setLastName(userResponse.getLastName());
 
             CredentialRepresentation credentialRepresentation = new CredentialRepresentation();
             credentialRepresentation.setValue(user.getPassword());

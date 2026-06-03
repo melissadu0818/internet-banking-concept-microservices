@@ -1,11 +1,11 @@
 package com.javatodev.finance.model.dto;
 
-import java.math.BigDecimal;
-
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
-public class FundTransfer extends AuditAware {
+public class FundTransfer {
     private Long id;
     private String transactionReference;
     private String status;

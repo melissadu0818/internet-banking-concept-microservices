@@ -2,10 +2,9 @@ package com.javatodev.finance.model.dto;
 
 import com.javatodev.finance.model.AccountStatus;
 import com.javatodev.finance.model.AccountType;
+import lombok.Data;
 
 import java.math.BigDecimal;
-
-import lombok.Data;
 
 @Data
 public class BankAccount {

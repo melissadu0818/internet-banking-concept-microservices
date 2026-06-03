@@ -2,7 +2,6 @@ package com.javatodev.finance.model.mapper;
 
 import com.javatodev.finance.model.dto.UtilityPayment;
 import com.javatodev.finance.model.entity.UtilityPaymentEntity;
-
 import org.springframework.beans.BeanUtils;
 
 public class UtilityPaymentMapper extends BaseMapper<UtilityPaymentEntity, UtilityPayment> {

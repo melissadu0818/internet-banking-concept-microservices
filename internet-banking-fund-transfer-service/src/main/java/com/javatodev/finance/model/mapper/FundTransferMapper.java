@@ -2,7 +2,6 @@ package com.javatodev.finance.model.mapper;
 
 import com.javatodev.finance.model.dto.FundTransfer;
 import com.javatodev.finance.model.entity.FundTransferEntity;
-
 import org.springframework.beans.BeanUtils;
 
 public class FundTransferMapper extends BaseMapper<FundTransferEntity, FundTransfer> {

@@ -5,13 +5,11 @@ import com.javatodev.finance.model.dto.User;
 import com.javatodev.finance.model.entity.UserEntity;
 import com.javatodev.finance.model.mapper.UserMapper;
 import com.javatodev.finance.repository.UserRepository;
-
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
